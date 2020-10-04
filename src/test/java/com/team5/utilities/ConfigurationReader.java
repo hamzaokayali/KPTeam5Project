@@ -8,7 +8,7 @@ public class ConfigurationReader {
 
     static {
 
-        String path = "C:\\Users\\Yazilim\\git\\techproedsummer2020turkish2_2\\KPTeam5Project\\configuration.properties";
+        String path = "C:\\Users\\Abdullah\\IdeaProjects\\KPTeam5Project\\configuration.properties";
         try {
             FileInputStream file = new FileInputStream(path);
             properties = new Properties();

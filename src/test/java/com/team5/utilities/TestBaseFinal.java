@@ -28,8 +28,8 @@ public abstract class TestBaseFinal {
         extentReports.setSystemInfo("Environment", "Environment Name");
         extentReports.setSystemInfo("Browser", ConfigurationReader.getProperty("browser"));
         extentReports.setSystemInfo("Automation Engineer", "ENGINEER INFORMATION");
-        extentHtmlReporter.config().setDocumentTitle("FHC Trip Reports");
-        extentHtmlReporter.config().setReportName("FHC Trip Automation Reports");
+        extentHtmlReporter.config().setDocumentTitle("Team05 Reports");
+        extentHtmlReporter.config().setReportName("Team05 Automation Reports");
     }
     @AfterMethod(alwaysRun = true)//In AfterMethod, we are getting the screenshots and attaching the report when test fails
     public void tearDownMethod(ITestResult result) throws IOException {
@@ -41,7 +41,7 @@ public abstract class TestBaseFinal {
         } else if (result.getStatus() == ITestResult.SKIP) {
             extentTest.skip("Test Case is skipped: " + result.getName());
         }
-        Driver.closeDriver();
+       // Driver.closeDriver();
     }
     @AfterTest(alwaysRun = true)
     public void tearDownTest() {
