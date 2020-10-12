@@ -28,26 +28,38 @@ public class Driver  {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
                     break;
                 case "ie":
                     WebDriverManager.iedriver().setup();
                     driver = new InternetExplorerDriver();
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
                     break;
                 case "safari":
                     WebDriverManager.getInstance(SafariDriver.class).setup();
                     driver = new SafariDriver();
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
                     break;
                 case "headless-chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
                     break;
                 case "edge":
                     WebDriverManager.edgedriver();
                     driver = new EdgeDriver();
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
                     break;
 
             }
